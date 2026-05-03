@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>สมัครงาน Content Creator | Social Impact</title>
+    <meta name="description" content="สมัครงานตำแหน่ง Content Creator กับบริษัท Social Impact">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <section class="hero" id="landing" aria-label="Social Impact recruitment">
+        <img class="hero__image" src="assets/social-impact-hero.png" alt="">
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <header class="brand">
+          <div class="brand__mark" aria-hidden="true">SI</div>
+          <div>
+            <p class="brand__name">Social Impact</p>
+            <p class="brand__sub">Content Creator Recruitment</p>
+          </div>
+        </header>
+
+        <div class="hero__content">
+          <p class="eyebrow">ร่วมทีม บจ. Social Impact</p>
+          <h1>มาสร้างคอนเทนต์ที่ทำให้สังคมขยับไปข้างหน้า</h1>
+          <p class="hero__lead">
+            เรากำลังมองหาคนเล่าเรื่องที่เข้าใจผู้คน คิดเป็นระบบ และอยากใช้พลังของสื่อเพื่อสร้างการเปลี่ยนแปลง
+          </p>
+          <button class="button button--primary" type="button" id="startApplication">
+            สมัครงาน
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <div class="hero__meta" aria-hidden="true">
+          <span>Content Creator</span>
+          <span>Social Impact</span>
+        </div>
+      </section>
+
+      <main class="form-screen" id="formScreen" hidden>
+        <section class="application-panel" aria-labelledby="formTitle">
+          <div class="form-heading">
+            <p class="eyebrow">ใบสมัครงาน</p>
+            <h2 id="formTitle">ตำแหน่ง Content Creator</h2>
+            <p>เล่าให้เรารู้จักคุณและวิธีคิดในการสร้างคอนเทนต์เพื่อสังคม</p>
+          </div>
+
+          <form class="application-form" id="applicationForm" novalidate>
+            <input type="hidden" name="position" value="Content Creator">
+
+            <div class="field-grid">
+              <label class="field">
+                <span>ชื่อ <strong>*</strong></span>
+                <input autocomplete="given-name" name="firstName" required type="text" placeholder="ชื่อจริง">
+              </label>
+
+              <label class="field">
+                <span>นามสกุล <strong>*</strong></span>
+                <input autocomplete="family-name" name="lastName" required type="text" placeholder="นามสกุล">
+              </label>
+
+              <label class="field">
+                <span>เบอร์โทร <strong>*</strong></span>
+                <input autocomplete="tel" inputmode="tel" name="phone" required type="tel" placeholder="08x-xxx-xxxx">
+              </label>
+
+              <label class="field">
+                <span>Email <strong>*</strong></span>
+                <input autocomplete="email" name="email" required type="email" placeholder="name@email.com">
+              </label>
+            </div>
+
+            <label class="field">
+              <span>Portfolio / Social link</span>
+              <input name="portfolio" type="url" placeholder="https://...">
+            </label>
+
+            <div class="question-stack">
+              <label class="field field--textarea">
+                <span>1. ถ้าต้องเล่าเรื่องประเด็นสังคมที่ซับซ้อนให้คนดูหยุดเลื่อนใน 5 วินาที คุณจะเริ่มด้วย hook แบบไหน และเพราะอะไร? <strong>*</strong></span>
+                <textarea name="answer1" required rows="5"></textarea>
+              </label>
+
+              <label class="field field--textarea">
+                <span>2. เลือกหนึ่งปัญหาสังคมที่คุณอยากทำคอนเทนต์เพื่อสร้างการเปลี่ยนแปลง คุณจะเล่าให้คนรู้สึกอยากมีส่วนร่วมอย่างไร? <strong>*</strong></span>
+                <textarea name="answer2" required rows="5"></textarea>
+              </label>
+
+              <label class="field field--textarea">
+                <span>3. เมื่อข้อมูลจริงกับความรู้สึกของผู้ชมดูขัดกัน คุณจะบาลานซ์ความถูกต้อง ความน่าสนใจ และความรับผิดชอบต่อสังคมอย่างไร? <strong>*</strong></span>
+                <textarea name="answer3" required rows="5"></textarea>
+              </label>
+            </div>
+
+            <label class="consent">
+              <input name="consent" required type="checkbox" value="yes">
+              <span>ยืนยันว่าข้อมูลถูกต้อง และยินยอมให้บริษัทติดต่อกลับเพื่อกระบวนการสมัครงาน <strong>*</strong></span>
+            </label>
+
+            <div class="form-actions">
+              <button class="button button--ghost" type="button" id="backToLanding">ย้อนกลับ</button>
+              <button class="button button--primary" type="submit" id="submitButton">
+                ส่งใบสมัคร
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+
+            <p class="form-message" id="formMessage" role="status"></p>
+          </form>
+        </section>
+      </main>
+
+      <section class="success-screen" id="successScreen" hidden>
+        <div class="success-mark" aria-hidden="true">✓</div>
+        <p class="eyebrow">Social Impact</p>
+        <h2>ได้รับข้อมูลการสมัครแล้ว กรุณารอการติดต่อกลับ</h2>
+      </section>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
